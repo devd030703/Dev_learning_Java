@@ -1,17 +1,44 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class Main {
+
+    public static void main(String[] args) {
+
+        int currentYear = 2022;
+
+        try {
+            System.out.println(getInputFromConsole(currentYear));
+        } catch (NullPointerException e) {
+            System.out.println(getInputFromScanner(currentYear));
         }
     }
-}
 
-// testing this commit works
+    public static String getInputFromConsole(int currentYear) {
+
+        String name = System.console().readLine("Hi, What's your Name? ");
+        System.out.println("Hi " + name + ", Thanks for taking the course!");
+
+        String dateOfBirth = System.console().readLine("What year were you born? ");
+        int age = currentYear - Integer.parseInt(dateOfBirth);
+
+        return "So you are " + age + " years old";
+    }
+
+    public static String getInputFromScanner(int currentYear) {
+
+        Scanner scanner = new Scanner(System.in);
+
+//        String name = System.console().readLine("Hi, What's your Name? ");
+        System.out.println("Hi, What's your Name? ");
+        String name = scanner.nextLine();
+
+        System.out.println("Hi " + name + ", Thanks for taking the course!");
+
+//        String dateOfBirth = System.console().readLine("What year were you born? ");
+        System.out.println("What year were you born? ");
+        String dateOfBirth = scanner.nextLine();
+        int age = currentYear - Integer.parseInt(dateOfBirth);
+
+        return "So you are " + age + " years old";
+    }
+}
