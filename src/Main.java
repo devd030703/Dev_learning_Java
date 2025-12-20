@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int currentYear = 2022;
+        int currentYear = 2025;
 
         try {
             System.out.println(getInputFromConsole(currentYear));
@@ -27,18 +27,36 @@ public class Main {
     public static String getInputFromScanner(int currentYear) {
 
         Scanner scanner = new Scanner(System.in);
+        boolean validDOB = false;
+        int age =0;
 
-//        String name = System.console().readLine("Hi, What's your Name? ");
         System.out.println("Hi, What's your Name? ");
         String name = scanner.nextLine();
 
         System.out.println("Hi " + name + ", Thanks for taking the course!");
 
-//        String dateOfBirth = System.console().readLine("What year were you born? ");
         System.out.println("What year were you born? ");
-        String dateOfBirth = scanner.nextLine();
-        int age = currentYear - Integer.parseInt(dateOfBirth);
+        do {
+            System.out.println("Please enter a number between " + (currentYear -125) + " and between " + (currentYear));
+            String dateOfBirth = scanner.nextLine();
+            try {
+                age = checkData(currentYear, dateOfBirth);
+                validDOB = age >= 0;
+            } catch (NumberFormatException badUserData) {
+                System.out.println("Characters not allowed, try again");
+            }
+        } while (!validDOB);
 
         return "So you are " + age + " years old";
     }
+    public static int checkData(int currentYear, String dateOfBirth) {
+        int dob = Integer.parseInt(dateOfBirth);
+        int minimumYear = currentYear - 125;
+        if (dob < minimumYear || dob > currentYear) {
+            return -1;
+        }
+        return currentYear - dob;
+    }
 }
+
+
