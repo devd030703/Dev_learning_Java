@@ -2,7 +2,7 @@ package CodexCode;
 
 import java.util.Scanner;
 
-public class Lesson78Challenge_Codex {
+public class Lesson78Challenge {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
