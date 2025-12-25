@@ -23,7 +23,7 @@ public class CodingExercise30 {
     }
 
     public double getSubtractionResult () {
-        return secondNumber - firstNumber;
+        return firstNumber - secondNumber;
     }
 
     public double getMultiplicationResult () {
