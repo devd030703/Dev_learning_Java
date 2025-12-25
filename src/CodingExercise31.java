@@ -1,23 +1,23 @@
 public class CodingExercise31 {
 
-    private String firstname;
-    private String lastname;
+    private String firstName;
+    private String lastName;
     private int age;
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public int getAge() {
@@ -27,8 +27,9 @@ public class CodingExercise31 {
     public void setAge(int age) {
         if (age < 0 || age > 100) {
             this.age = 0;
+        } else {
+            this.age = age;
         }
-        this.age = age;
     }
 
     public boolean isTeen (){
@@ -36,16 +37,16 @@ public class CodingExercise31 {
     }
 
     public String getFullName (){
-        if (firstname.isEmpty() && lastname.isEmpty()){
+        if (firstName.isEmpty() && lastName.isEmpty()){
             return "";
         }
-        if (lastname.isEmpty()){
-            return firstname;
+        if (lastName.isEmpty()){
+            return firstName;
         }
-        if (firstname.isEmpty()){
-            return lastname;
+        if (firstName.isEmpty()){
+            return lastName;
         }
-        return firstname + " " + lastname;
+        return firstName + " " + lastName;
     }
 
 }
