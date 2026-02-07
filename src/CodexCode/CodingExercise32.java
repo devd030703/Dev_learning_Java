@@ -32,5 +32,3 @@ public class CodingExercise32 {
         return width * height;
     }
 }
-
-///test
