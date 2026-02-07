@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         for (int i = 1; i <= 5; i++) {
-            Lesson89 s = new Lesson89 (
+            Lesson90 s = new Lesson90 (
                     "S92300" + i,
                     switch (i) {
                         case 1 -> "Mary";
@@ -17,7 +17,25 @@ public class Main {
                     "05/11/1985",
                     "Java Masterclass"
             );
+            System.out.println(s);
         }
+
+        Lesson89 pojoStudent = new Lesson89 (
+                "S923006",
+                "Ann",
+                "05/11/2985",
+                "Java Masterclass"
+        );
+        Lesson90 recordStudent = new Lesson90 (
+                "S923007",
+                "Bill",
+                "05/11/1985",
+                "Java Masterclass"
+        );
+
+        System.out.println(pojoStudent);
+        System.out.println(recordStudent);
+
 
     }
 }
