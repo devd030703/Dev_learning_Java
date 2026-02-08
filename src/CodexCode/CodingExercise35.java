@@ -1,10 +1,10 @@
 package CodexCode;
 
-public class ComplexNumber {
+public class CodingExercise35 {
     private double real;
     private double imaginary;
 
-    public ComplexNumber(double real, double imaginary) {
+    public CodingExercise35(double real, double imaginary) {
         this.real = real;
         this.imaginary = imaginary;
     }
@@ -22,11 +22,11 @@ public class ComplexNumber {
         this.imaginary += imaginary;
     }
 
-    public void add(ComplexNumber complexNumber) {
-        if (complexNumber == null) {
+    public void add(CodingExercise35 codingExercise35) {
+        if (codingExercise35 == null) {
             return;
         }
-        add(complexNumber.real, complexNumber.imaginary);
+        add(codingExercise35.real, codingExercise35.imaginary);
     }
 
     public void subtract(double real, double imaginary) {
@@ -34,10 +34,10 @@ public class ComplexNumber {
         this.imaginary -= imaginary;
     }
 
-    public void subtract(ComplexNumber complexNumber) {
-        if (complexNumber == null) {
+    public void subtract(CodingExercise35 codingExercise35) {
+        if (codingExercise35 == null) {
             return;
         }
-        subtract(complexNumber.real, complexNumber.imaginary);
+        subtract(codingExercise35.real, codingExercise35.imaginary);
     }
 }
