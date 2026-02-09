@@ -8,7 +8,6 @@ public class Lesson77Challenge {
         while (validCount < 5) {
             System.out.println("Enter a number, this will be number #" + (validCount + 1));
             String value = scanner.nextLine();
-
             try {
                 int number = Integer.parseInt(value);
                 sum += number;
