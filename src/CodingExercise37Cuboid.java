@@ -13,4 +13,5 @@ public class CodingExercise37Cuboid extends CodingExercise37Rectangle {
     public double getVolume() {
         return getArea() * height;
     }
+
 }

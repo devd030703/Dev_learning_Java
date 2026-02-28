@@ -18,4 +18,5 @@ public class CodingExercise37Rectangle {
     public double getArea() {
         return width * length;
     }
+
 }
