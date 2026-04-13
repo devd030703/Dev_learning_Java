@@ -35,7 +35,7 @@ public class Main {
         System.out.println();
         System.out.println(Arrays.toString(newArray));
 
-        Object objectVariable - newArray;
+        Object objectVariable = newArray;
         if (objectVariable instanceof int[]) {
             System.out.println("objectVariable is really an int array");
         }
@@ -43,6 +43,5 @@ public class Main {
         Object[] objectArray = new Object[3];
         objectArray[0] = "Hello";
         objectArray[1] = new StringBuilder("World");
-        ObjectArray [2] = newArray;
     }
 }
