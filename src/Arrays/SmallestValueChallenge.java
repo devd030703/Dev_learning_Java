@@ -1,9 +1,14 @@
 package Arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class SmallestValueChallenge {
     public static void main(String[] args) {
+
+        int[] numbers = readIntegers();
+        System.out.println(Arrays.toString(numbers));
+        System.out.println(findMin(numbers));
 
     }
 
